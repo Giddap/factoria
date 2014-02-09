@@ -2,5 +2,11 @@ package org.giddap.prototype.factoria
 
 class ListingController {
 
-    def index() {}
+    def scaffold = Listing
+
+    def index = {
+        def listings = Listing.list([sort:"zipCode", order:"asc"])
+
+        return [listings: listings]
+    }
 }

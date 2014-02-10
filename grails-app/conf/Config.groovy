@@ -13,6 +13,8 @@
 
 grails.project.groupId = org.giddap.prototype.factoria // change this to alter the default package name and Maven publishing destination
 
+grails.app.context = "/"
+
 // The ACCEPT header will not be used for content negotiation for user agents containing the following strings (defaults to the 4 major rendering engines)
 grails.mime.disable.accept.header.userAgents = ['Gecko', 'WebKit', 'Presto', 'Trident']
 grails.mime.types = [ // the first one is the default format
@@ -67,7 +69,7 @@ grails {
 
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
-grails.scaffolding.templates.domainSuffix = 'Instance'
+//grails.scaffolding.templates.domainSuffix = 'Instance'
 
 // Set to false to use the new Grails 1.2 JSONBuilder in the render method
 grails.json.legacy.builder = false
@@ -114,3 +116,7 @@ log4j = {
             'org.hibernate',
             'net.sf.ehcache.hibernate'
 }
+
+// Integrate with AWS Elastic Beanstalk
+grails.plugin.awsElasticBeanstalk.applicationName = 'factoria'
+grails.plugin.awsElasticBeanstalk.environmentName = 'factoria-prototype-env'

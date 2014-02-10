@@ -53,17 +53,19 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        compile ':spring-security-core:1.2.7.3'
-        compile ':mongodb:1.3.3'
+//        compile ':spring-security-core:1.2.7.3'
+//        compile ':mongodb:1.3.3'
         compile ':webxml:1.4.1'
         compile ':ws-client:1.0'
+//        compile ":scaffolding:2.0.1"
         compile ":twitter-bootstrap:3.1.0"
-
-        //runtime ':lesscss-resources:1.3.0.3'
+//        compile ':lesscss-resources:1.3.3'
+        compile ":aws-elastic-beanstalk:0.2"
 
         runtime ':resources:1.2.1'
         runtime ':jquery:1.11.0'
 
         build ':tomcat:7.0.50'
+
     }
 }
